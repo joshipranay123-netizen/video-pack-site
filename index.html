@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>500+ Ready YouTube Videos — ₹199</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12181b;
+    --ink-2:#1a2226;
+    --tape:#ede6d6;
+    --tape-dim:#c9c0ab;
+    --amber:#e8a33d;
+    --crimson:#c4432b;
+    --teal:#3a5a5b;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--tape);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .display{font-family:'Bebas Neue',sans-serif; letter-spacing:0.02em;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--amber);
+    outline-offset:3px;
+  }
+
+  /* sprocket strip — structural, reads as physical film edge */
+  .sprocket-strip{
+    display:flex;
+    height:18px;
+    background:repeating-linear-gradient(
+      90deg,
+      var(--ink-2) 0px, var(--ink-2) 14px,
+      transparent 14px, transparent 28px
+    );
+    position:relative;
+  }
+  .sprocket-strip::before, .sprocket-strip::after{
+    content:"";
+    position:absolute; top:5px; left:0; right:0;
+    height:8px;
+    background:repeating-linear-gradient(
+      90deg,
+      var(--ink) 0px, var(--ink) 6px,
+      transparent 6px, transparent 28px
+    );
+  }
+  .sprocket-strip::after{ top:auto; bottom:5px; }
+
+  .wrap{max-width:640px; margin:0 auto; padding:0 24px;}
+
+  /* HERO */
+  header.hero{
+    padding:56px 0 40px;
+    text-align:center;
+    position:relative;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--amber);
+    border:1px solid rgba(232,163,61,0.4);
+    padding:6px 12px; border-radius:100px;
+    margin-bottom:28px;
+  }
+  .rec-dot{
+    width:7px; height:7px; border-radius:50%;
+    background:var(--crimson);
+    animation:blink 1.4s infinite;
+  }
+  @keyframes blink{ 0%,100%{opacity:1;} 50%{opacity:0.25;} }
+
+  .counter{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(64px, 22vw, 108px);
+    line-height:0.9;
+    color:var(--tape);
+    letter-spacing:0.01em;
+  }
+  .counter .plus{ color:var(--amber); }
+  .counter-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--tape-dim);
+    margin-top:4px;
+  }
+
+  h1{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(30px, 7vw, 44px);
+    line-height:1.05;
+    letter-spacing:0.01em;
+    margin-top:28px;
+    color:var(--tape);
+  }
+  h1 span{ color:var(--amber); }
+
+  .subhead{
+    max-width:440px;
+    margin:16px auto 0;
+    color:var(--tape-dim);
+    font-size:16px;
+  }
+
+  .timecode{
+    display:inline-block;
+    margin-top:28px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    color:var(--teal);
+    background:rgba(58,90,91,0.15);
+    border:1px solid rgba(58,90,91,0.5);
+    padding:6px 14px;
+    border-radius:4px;
+    letter-spacing:0.05em;
+  }
+
+  /* SECTIONS */
+  section{ padding:44px 0; }
+  .section-title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:26px;
+    letter-spacing:0.02em;
+    color:var(--amber);
+    margin-bottom:20px;
+  }
+
+
+  .banner-full{
+    margin: -0px -24px 24px -24px;
+  }
+  .banner-img{
+    width:100%;
+    display:block;
+  }
+  .profile-badge{
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    margin-bottom:24px;
+  }
+  .profile-pic{
+    width:64px; height:64px; border-radius:50%;
+    border:2px solid var(--amber);
+  }
+  .profile-name{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px; letter-spacing:0.08em;
+    color:var(--tape-dim);
+  }
+  .placeholder-img{
+    background:repeating-linear-gradient(
+      45deg,
+      var(--ink-2), var(--ink-2) 8px,
+      #212b30 8px, #212b30 16px
+    );
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .placeholder-img::after{
+    content: attr(data-note);
+    position:absolute;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:9px;
+    color:var(--amber);
+    text-align:center;
+    padding:4px;
+    line-height:1.3;
+  }
+  .preview-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:10px;
+    margin-top:20px;
+  }
+  .preview-thumb{
+    border-radius:8px;
+    border:1px solid rgba(232,163,61,0.25);
+    overflow:hidden;
+    background:var(--ink-2);
+  }
+  .preview-thumb .placeholder-img{ width:100%; height:auto; display:block; border-radius:8px; }
+
+  .reel-list{ list-style:none; }
+  .reel-list li{
+    display:flex; align-items:flex-start; gap:14px;
+    padding:14px 0;
+    border-bottom:1px solid rgba(237,230,214,0.08);
+  }
+  .reel-list li:last-child{ border-bottom:none; }
+  .frame-no{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--ink);
+    background:var(--amber);
+    min-width:26px; height:26px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:4px;
+    flex-shrink:0;
+  }
+  .reel-list p{ font-size:15px; color:var(--tape); }
+  .reel-list p b{ color:var(--tape); }
+
+  /* PRICE CARD */
+  .price-card{
+    background:var(--ink-2);
+    border:1px solid rgba(232,163,61,0.25);
+    border-radius:12px;
+    padding:32px 24px;
+    text-align:center;
+    position:relative;
+  }
+  .price-card .tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--crimson);
+    margin-bottom:10px;
+  }
+  .price{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:64px;
+    color:var(--tape);
+    line-height:1;
+  }
+  .price sup{ font-size:24px; top:-24px; color:var(--amber); }
+  .price-sub{ color:var(--tape-dim); font-size:14px; margin-top:6px; }
+
+  .buy-btn{
+    margin-top:24px;
+    width:100%;
+    background:var(--amber);
+    color:var(--ink);
+    border:none;
+    padding:16px 20px;
+    border-radius:8px;
+    font-family:'Inter',sans-serif;
+    font-weight:700;
+    font-size:16px;
+    cursor:pointer;
+    transition:transform 0.15s ease, background 0.15s ease;
+  }
+  .buy-btn:hover{ background:#f2b458; transform:translateY(-1px); }
+  .buy-btn:active{ transform:translateY(0); }
+
+  .reassure{
+    margin-top:14px;
+    font-size:12px;
+    color:var(--tape-dim);
+    font-family:'IBM Plex Mono',monospace;
+  }
+
+  /* FAQ */
+  .faq-item{ padding:16px 0; border-bottom:1px solid rgba(237,230,214,0.08); }
+  .faq-item:last-child{ border-bottom:none; }
+  .faq-q{ font-weight:600; font-size:15px; color:var(--tape); margin-bottom:6px; }
+  .faq-a{ font-size:14px; color:var(--tape-dim); }
+
+  footer{
+    text-align:center;
+    padding:36px 0 48px;
+    color:var(--tape-dim);
+    font-size:12px;
+    font-family:'IBM Plex Mono',monospace;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .rec-dot{ animation:none; }
+  }
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1021800593822500');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1021800593822500&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<form name="payment-notify" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="payment_id" />
+  <input type="text" name="amount" />
+  <input type="text" name="timestamp" />
+</form>
+
+<form name="lead-capture" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="phone" />
+  <input type="text" name="timestamp" />
+</form>
+
+<div class="sprocket-strip"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="banner-full">
+      <img class="banner-img" src="images/img1.jpg" loading="lazy" alt="Video pack banner">
+    </div>
+
+    <div class="eyebrow"><span class="rec-dot"></span> Ab upload karo, seedha earning karo</div>
+
+    <div class="counter">500<span class="plus">+</span></div>
+    <div class="counter-label">Ready-made videos is bundle mein</div>
+
+    <h1>Script likhna band.<br>Editing karna band.<br><span>Bas upload karo.</span></h1>
+    <p class="subhead">Apne YouTube channel ke liye pura ready-to-upload video pack — na camera chahiye, na editing software, na ideas sochne ka jhanjhat.</p>
+
+    <div class="timecode">00:00:05:00 &nbsp;— download se pehle upload tak</div>
+  </div>
+</header>
+
+<div class="sprocket-strip"></div>
+
+<section>
+  <div class="wrap">
+    <div class="section-title">Bundle mein kya milega</div>
+    <ul class="reel-list">
+      <li>
+        <span class="frame-no">01</span>
+        <p><b>500+ complete videos</b> — jaise hain waise hi upload karne layak, koi editing nahi chahiye.</p>
+      </li>
+      <li>
+        <span class="frame-no">02</span>
+        <p><b>Sirf ek baar payment</b> — ek baar pay karo, pura bundle hamesha ke liye tumhara.</p>
+      </li>
+      <li>
+        <span class="frame-no">03</span>
+        <p><b>Turant access</b> — checkout ke turant baad download link mil jayega.</p>
+      </li>
+      <li>
+        <span class="frame-no">04</span>
+        <p><b>Apni speed se post karo</b> — hafton mein baant do ya ek saath upload karo, tumhari marzi.</p>
+      </li>
+    </ul>
+
+    <div class="preview-grid">
+      <div class="preview-thumb"><img class="placeholder-img" src="images/img2.jpg" loading="lazy" alt="Sample video" style="width:100%;height:auto;display:block;"></div>
+      <div class="preview-thumb"><img class="placeholder-img" src="images/img3.jpg" loading="lazy" alt="Sample video" style="width:100%;height:auto;display:block;"></div>
+      <div class="preview-thumb"><img class="placeholder-img" src="images/img4.jpg" loading="lazy" alt="Sample video" style="width:100%;height:auto;display:block;"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div style="background:var(--ink-2); border:1px dashed rgba(232,163,61,0.4); border-radius:8px; padding:16px; text-align:center;">
+      <p style="font-size:14px; color:var(--tape); margin-bottom:10px;">Abhi decide nahi kar paaye? Apna number chhodo — extra discount code bhejenge.</p>
+      <form id="leadForm" style="display:flex; gap:8px; max-width:320px; margin:0 auto;">
+        <input id="leadPhone" type="tel" placeholder="Aapka mobile number" required
+               style="flex:1; padding:10px; border-radius:6px; border:1px solid var(--tape-dim); background:var(--ink); color:var(--tape); font-size:14px;">
+        <button type="submit" style="background:var(--teal); color:var(--tape); border:none; padding:10px 16px; border-radius:6px; font-weight:700; cursor:pointer;">Bhejo</button>
+      </form>
+      <p id="leadThanks" hidden style="font-size:13px; color:var(--amber); margin-top:8px;">Dhanyavaad! Jaldi discount code milega.</p>
+    </div>
+  </div>
+</section>
+
+<section id="buy">
+  <div class="wrap">
+    <div class="section-title" style="text-align:center;">Apna bundle chuno</div>
+    <div style="display:grid; grid-template-columns:1fr; gap:16px;">
+
+      <div class="price-card">
+        <div class="tag">Starter</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; color:var(--tape-dim); text-decoration:line-through; margin-bottom:2px;">₹1999</div>
+        <div class="price"><sup>₹</sup>199</div>
+        <div class="price-sub">one-time payment · 500+ videos · instant download</div>
+        <div id="countdown" style="margin-top:10px; font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--crimson);">Aaj ka offer khatam hone mein: <span id="countdownTime">--:--:--</span></div>
+        <button class="buy-btn" disabled data-label="Bundle lo — ₹199" data-amount="19900" data-product="500+ ready-made YouTube videos" data-price-label="199">Payment system taiyar ho raha hai&hellip;</button>
+        <div class="reassure">Razorpay se secure checkout · UPI, cards &amp; netbanking</div>
+      </div>
+
+      <div class="price-card" style="border-color:rgba(232,163,61,0.6);">
+        <div class="tag" style="color:var(--amber);">Best Value</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; color:var(--tape-dim); text-decoration:line-through; margin-bottom:2px;">₹4999</div>
+        <div class="price"><sup>₹</sup>499</div>
+        <div class="price-sub">one-time payment · 2000+ videos · multiple niches · instant download</div>
+        <button class="buy-btn" disabled data-label="Premium Bundle lo — ₹499" data-amount="49900" data-product="2000+ ready-made YouTube videos - Premium" data-price-label="499">Payment system taiyar ho raha hai&hellip;</button>
+        <div class="reassure">Razorpay se secure checkout · UPI, cards &amp; netbanking</div>
+      </div>
+
+      <div id="downloadPanel" hidden style="margin-top:4px; padding:18px; background:rgba(58,90,91,0.15); border:1px solid var(--teal); border-radius:8px; text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:20px; color:var(--tape); margin-bottom:8px;">Payment Verified ✓</div>
+        <p style="font-size:14px; color:var(--tape-dim); margin-bottom:14px;">Aapka bundle taiyar hai — neeche diye link se download karein.</p>
+        <a id="downloadLink" href="#" target="_blank" rel="noopener" style="display:inline-block; background:var(--amber); color:var(--ink); font-weight:700; padding:12px 20px; border-radius:6px; text-decoration:none;">Download Bundle</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-title">Logo kya keh rahe hain</div>
+    <ul class="reel-list">
+      <li>
+        <span class="frame-no">★</span>
+        <p><b>Rohit S.</b> — "Bundle mila usi din upload bhi kar diya, itna easy tha." <span style="color:var(--tape-dim); font-size:13px; display:block; margin-top:2px;">[Edit: replace with a real customer quote once you have one]</span></p>
+      </li>
+      <li>
+        <span class="frame-no">★</span>
+        <p><b>Priya M.</b> — "Editing ka jhanjhat khatam, seedha download aur post." <span style="color:var(--tape-dim); font-size:13px; display:block; margin-top:2px;">[Edit: replace with a real customer quote once you have one]</span></p>
+      </li>
+      <li>
+        <span class="frame-no">★</span>
+        <p><b>Aman K.</b> — "Price ke hisaab se value bahut zyada hai." <span style="color:var(--tape-dim); font-size:13px; display:block; margin-top:2px;">[Edit: replace with a real customer quote once you have one]</span></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-title">Sawaal jawaab</div>
+    <div class="faq-item">
+      <div class="faq-q">Kya mujhe kuch edit karna padega?</div>
+      <div class="faq-a">Nahi. Videos download karte hi seedha upload karne layak hain.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Payment ke baad bundle kaise milega?</div>
+      <div class="faq-a">Payment confirm hote hi download link mil jayega.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Kya yeh one-time payment hai?</div>
+      <div class="faq-a">Haan — sirf ek baar ₹199, bundle hamesha ke liye tumhara.</div>
+    </div>
+  </div>
+</section>
+
+<div class="sprocket-strip"></div>
+
+<footer>
+  <div class="wrap">
+    Koi issue ho toh contact karo: <span style="color:var(--amber);">joshipranay123@gmail.com</span>
+    <br><br>© 2026 · Checkout Razorpay se secure hai
+  </div>
+</footer>
+
+<script>
+  var DRIVE_LINK = "https://drive.google.com/file/d/1VOkRqzk13TgzBAW1CGOMsKQbOHYHiRmi/view?usp=drive_link";
+
+  // Countdown resets daily at midnight — shows genuine time left in "today's price", not a one-time fake deadline
+  function startCountdown() {
+    var el = document.getElementById('countdownTime');
+    if (!el) return;
+    function tick() {
+      var now = new Date();
+      var midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+      var diff = midnight - now;
+      var h = Math.floor(diff / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      el.textContent = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+    }
+    tick();
+    setInterval(tick, 1000);
+  }
+  startCountdown();
+
+  // Safe wrapper: does nothing until the Meta Pixel script (above) is uncommented and activated.
+  // Once activated, this automatically starts firing 'Purchase' events for ad optimization.
+  function trackPurchase(amount) {
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Purchase', { value: amount, currency: 'INR' });
+    }
+  }
+
+  function notifyOwner(paymentId, amount) {
+    // Fire-and-forget submission to the hidden Netlify form so Pranay gets an email per payment.
+    var body = new URLSearchParams({
+      'form-name': 'payment-notify',
+      payment_id: paymentId,
+      amount: amount,
+      timestamp: new Date().toISOString()
+    }).toString();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body
+    }).catch(function () { /* silent — notification is best-effort, never blocks the buyer */ });
+  }
+  var attempts = 0;
+  var MAX_ATTEMPTS = 4;
+  var RAZORPAY_KEY_ID = "rzp_live_TIvnSkq2nUzpWz"; // public Key ID — safe to expose client-side
+  var razorpayReady = false;
+
+  function tryLoadRazorpay() {
+    attempts++;
+    var s = document.createElement('script');
+    s.src = "https://checkout.razorpay.com/v1/checkout.js";
+    s.onload = function () {
+      razorpayReady = true;
+      document.querySelectorAll('.buy-btn').forEach(function (b) {
+        b.disabled = false;
+        b.textContent = b.dataset.label;
+      });
+    };
+    s.onerror = function () {
+      if (attempts < MAX_ATTEMPTS) {
+        document.querySelectorAll('.buy-btn').forEach(function (b) {
+          b.textContent = "Dobara koshish ho rahi hai\u2026 (" + attempts + "/" + MAX_ATTEMPTS + ")";
+        });
+        setTimeout(tryLoadRazorpay, 2000);
+      } else {
+        document.querySelectorAll('.buy-btn').forEach(function (b) {
+          b.disabled = false;
+          b.textContent = "Load nahi hua — yahan tap karein";
+        });
+      }
+    };
+    document.head.appendChild(s);
+  }
+  tryLoadRazorpay();
+
+  var leadForm = document.getElementById('leadForm');
+  if (leadForm) {
+    leadForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var phone = document.getElementById('leadPhone').value.trim();
+      var body = new URLSearchParams({
+        'form-name': 'lead-capture',
+        phone: phone,
+        timestamp: new Date().toISOString()
+      }).toString();
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body
+      }).finally(function () {
+        leadForm.hidden = true;
+        document.getElementById('leadThanks').hidden = false;
+      });
+    });
+  }
+
+  function startCheckout(btn, amountPaise, productName, priceLabel) {
+    var original = btn.dataset.label;
+    btn.disabled = true;
+    btn.textContent = "Order taiyar ho raha hai\u2026";
+
+    fetch('/.netlify/functions/create-order', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ amount: amountPaise })
+    })
+      .then(function (res) {
+        return res.json().then(function (data) {
+          if (!res.ok) throw new Error(data.details || data.error || 'Order create failed');
+          return data;
+        });
+      })
+      .then(function (order) {
+        btn.disabled = false;
+        btn.textContent = original;
+
+        var options = {
+          key: RAZORPAY_KEY_ID,
+          amount: order.amount,
+          currency: order.currency,
+          order_id: order.order_id,
+          name: "Video Pack",
+          description: productName,
+          handler: function (response) {
+            btn.disabled = true;
+            btn.textContent = "Payment verify ho raha hai\u2026";
+
+            fetch('/.netlify/functions/verify-payment', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature
+              })
+            })
+              .then(function (res) { return res.json(); })
+              .then(function (result) {
+                btn.disabled = false;
+                btn.textContent = original;
+                if (result.verified) {
+                  var panel = document.getElementById('downloadPanel');
+                  var link = document.getElementById('downloadLink');
+                  link.href = DRIVE_LINK;
+                  panel.hidden = false;
+                  panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  notifyOwner(result.payment_id, priceLabel);
+                  trackPurchase(amountPaise / 100);
+                  alert("Payment verified! Neeche download link mil gaya hai.");
+                } else {
+                  alert("Payment verify nahi ho paaya. Agar paisa kata hai to screenshot ke saath contact karein.");
+                }
+              })
+              .catch(function () {
+                btn.disabled = false;
+                btn.textContent = original;
+                alert("Verification mein dikkat aayi. Agar paisa kata hai to screenshot ke saath contact karein.");
+              });
+          },
+          modal: {
+            ondismiss: function () {
+              btn.disabled = false;
+              btn.textContent = original;
+            }
+          },
+          prefill: { name: "", email: "", contact: "" },
+          theme: { color: "#e8a33d" }
+        };
+
+        var rzp = new Razorpay(options);
+        rzp.on('payment.failed', function (response) {
+          alert("Payment fail ho gaya: " + response.error.description);
+          btn.disabled = false;
+          btn.textContent = original;
+        });
+        rzp.open();
+      })
+      .catch(function (err) {
+        btn.disabled = false;
+        btn.textContent = original;
+        alert("Error: " + (err.message || err));
+      });
+  }
+
+  document.querySelectorAll('.buy-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (!razorpayReady) {
+        btn.disabled = true;
+        btn.textContent = "Dobara koshish ho rahi hai\u2026";
+        attempts = 0;
+        tryLoadRazorpay();
+        return;
+      }
+      var amount = parseInt(btn.dataset.amount, 10);
+      var product = btn.dataset.product;
+      var priceLabel = btn.dataset.priceLabel;
+      startCheckout(btn, amount, product, priceLabel);
+    });
+  });
+</script>
+
+<a href="https://wa.me/919898320980?text=Hi%2C%20mujhe%20video%20bundle%20order%20karne%20mein%20help%20chahiye" target="_blank" rel="noopener"
+   style="position:fixed; bottom:20px; right:20px; z-index:999; background:#25D366; width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.26-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
+</a>
+
+</body>
+</html>
