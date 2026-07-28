@@ -11,7 +11,7 @@ exports.handler = async function (event) {
   if (!keyId || !keySecret) {
     return {
       statusCode: 401,
-      body: JSON.stringify({ error: 'Razorpay credentials not configured on the server' }),
+      body: JSON.stringify({ error: 'Server missing RAZORPAY_KEY_ID or RAZORPAY_KEY_SECRET env vars' }),
     };
   }
 
@@ -48,10 +48,14 @@ exports.handler = async function (event) {
       }),
     };
   } catch (err) {
-    console.error('Razorpay order creation failed:', err);
+    // Return the REAL Razorpay error so we can see it on the frontend directly
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Failed to create order' }),
+      body: JSON.stringify({
+        error: 'Razorpay order creation failed',
+        details: err.error ? err.error.description : err.message,
+        statusCode: err.statusCode || null,
+      }),
     };
   }
 };
